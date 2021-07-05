@@ -1,0 +1,50 @@
+package main;
+import java.util.Scanner;
+
+
+public class Converter {
+	public static void main(String[] args) {
+		
+		System.out.println("Please select an option: "
+				+ "1. Cups to Teaspoons "
+				+ "2. Miles to Kilometers "
+				+ "3. Us Gallons to Imperial Gallons "
+				+ "4. Quit ");
+		
+		
+		Scanner scan = new Scanner(System.in);
+		int menuSelection = scan.nextInt();
+		
+		switch(menuSelection) {
+			case 1: 
+				System.out.println("Cups to Teaspoons.  "
+						+ "Please enter a  number of Cups: ");
+						int numofCups = scan.nextInt();
+						int numofTeaspoons = numofCups * 48;
+						System.out.println(numofCups + " cups equals " + numofTeaspoons + " teaspoons");
+				return;
+			case 2:
+				System.out.println("Miles to Kilometers. "
+						+ "Please enter a number of Miles: ");
+						int numofMiles = scan.nextInt();
+						double numofKilometers = numofMiles * 1.609344;
+						System.out.println(numofMiles + " miles equals " + numofKilometers + " kilometers");
+				return;
+			case 3:
+				System.out.println("US Gallons to Imperial Gallons. "
+						+ " Please enter a number of gallons: ");
+						int numofGallons = scan.nextInt();
+						double numofImperialGallons = numofGallons * 1.2009;
+						System.out.println(numofGallons + " gallons equals " + numofImperialGallons + " Imperial Gallons.");
+				return;
+			case 4: 
+				System.out.println("Have a wonderful day.");
+				break;
+			default:
+				System.out.println("Please select from one of the options.");
+				break;
+		}
+		
+		
+	}
+}

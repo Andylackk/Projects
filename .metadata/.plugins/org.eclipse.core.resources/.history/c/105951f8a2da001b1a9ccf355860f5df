@@ -1,0 +1,40 @@
+package main;
+import java.util.Scanner;
+
+
+public class Converter {
+	public static void main(String[] args) {
+		
+		System.out.println("Please select an option: "
+				+ "1. Cups to Teaspoons "
+				+ "2. Miles to Kilometers "
+				+ "3. Us Gallons to Imperial Gallons "
+				+ "4. Quit ");
+		
+		
+		Scanner scan = new Scanner(System.in);
+		int menuSelection = scan.nextInt();
+		
+		switch(menuSelection) {
+			case 1: 
+				System.out.println("Cups to Teaspoons.  "
+						+ "Number of Cups: ");
+						int numofCups = scan.nextInt();
+						System.out.println("You have entered " + numofCups + " cups");
+				break;
+			case 2:
+				System.out.println("Miles to Kilometers");
+				break;
+			case 3:
+				System.out.println("US Gallons to Imperial Gallons");
+				break;
+			case 4: 
+				System.out.println("Quit");
+				break;
+			default:
+				System.out.println("Please select from one of the options.");
+				break;
+		}
+		
+	}
+}
