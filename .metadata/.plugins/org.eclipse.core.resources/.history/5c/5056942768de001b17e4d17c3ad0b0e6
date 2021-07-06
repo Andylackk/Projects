@@ -68,7 +68,8 @@ public class Converter {
 								System.out.println("Inches to Centimeters. "
 										+ " Please enter a number of inches: ");
 										int inches = disScan.nextInt();
-										System.out.println(inches + " inches equals " + getCentimeters(inches) + " centimeters.");
+										double centimeters = inches * .004;
+										System.out.println(inches + " inches equals " + centimeters + " centimeters.");
 							break;
 							case 3: 
 								exit();
@@ -97,10 +98,6 @@ public class Converter {
 	public static double getKilometers(int miles) {
 		double numofKilometers = miles * 1.609344;
 		return numofKilometers;
-	}
-	public static double getCentimeters(int inches) {
-		double numofCentimeters = inches *.064;
-		return numofCentimeters;
 	}
 	public static void mainMenu() {
 		System.out.println("Please select a type of conversion: "

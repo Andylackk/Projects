@@ -98,8 +98,8 @@ public class Converter {
 		double numofKilometers = miles * 1.609344;
 		return numofKilometers;
 	}
-	public static double getCentimeters(int inches) {
-		double numofCentimeters = inches *.064;
+	public static double getCentimeters(int incherrrs) {
+		double numofCentimeters = incherrrs *.064;
 		return numofCentimeters;
 	}
 	public static void mainMenu() {

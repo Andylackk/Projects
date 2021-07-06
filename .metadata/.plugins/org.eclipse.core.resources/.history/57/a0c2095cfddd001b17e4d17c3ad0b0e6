@@ -18,9 +18,7 @@ public class Converter {
 						+ "Please select which type of volume to convert: "
 						+ "1. Cups to Teaspoons "
 						+ "2. US Gallons to Imperial Gallons "
-						+ "3. Quit"
-						+ "4. Main Menu");
-				
+						+ "3. Quit");
 						Scanner volScan = new Scanner(System.in);
 						int volumeSelection = volScan.nextInt();
 						
@@ -41,8 +39,6 @@ public class Converter {
 							case 3: 
 								exit();
 							break;
-							case 4: 
-								mainMenu();
 							default:
 								defaultMssg();
 							}
@@ -62,13 +58,15 @@ public class Converter {
 								System.out.println("Miles to Kilometers. "
 										+ "Please enter amount of miles");
 								int miles = disScan.nextInt();
-								System.out.println(miles + " miles equals " + getKilometers(miles) + " Kilometers");
+								double numofKilometers = miles * 1.609344;
+								System.out.println(miles + " miles equals " + numofKilometers + " Kilometers");
 							break;
 							case 2:
 								System.out.println("Inches to Centimeters. "
 										+ " Please enter a number of inches: ");
 										int inches = disScan.nextInt();
-										System.out.println(inches + " inches equals " + getCentimeters(inches) + " centimeters.");
+										double centimeters = inches * .004;
+										System.out.println(inches + " inches equals " + centimeters + " centimeters.");
 							break;
 							case 3: 
 								exit();
@@ -76,7 +74,7 @@ public class Converter {
 							break;
 							case 4:
 								mainMenu();
-							break;
+							continue;
 							default:
 								defaultMssg();
 							}
@@ -93,14 +91,6 @@ public class Converter {
 	public static double getImpGallons(int gallons) {
 		double numofImpGallons = gallons * 1.2009;
 		return numofImpGallons;
-	}
-	public static double getKilometers(int miles) {
-		double numofKilometers = miles * 1.609344;
-		return numofKilometers;
-	}
-	public static double getCentimeters(int inches) {
-		double numofCentimeters = inches *.064;
-		return numofCentimeters;
 	}
 	public static void mainMenu() {
 		System.out.println("Please select a type of conversion: "
